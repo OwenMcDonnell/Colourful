@@ -14,7 +14,7 @@ build_script:
 - dotnet build --no-restore --configuration Release
 
 test_script:
-- dotnet test --no-build --configuration Release -p:CollectCoverage=true
+- dotnet test --no-build --configuration Release --logger "console;verbosity=detailed" -p:CollectCoverage=true 
 
 after_test:
 - choco install codecov

@@ -20,9 +20,9 @@ test:
 #test_script:
 #- dotnet test --no-build --configuration Release -p:CollectCoverage=true 
 
-after_test:
-- choco install codecov
-- pwsh: codecov --file @(ls ./testresults/*.opencover.xml)
+#after_test:
+#- choco install codecov
+#- pwsh: codecov --file @(ls ./testresults/*.opencover.xml)
 
 artifacts:
 - path: ./**/*.nupkg

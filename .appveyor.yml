@@ -13,8 +13,12 @@ before_build:
 build_script:
 - dotnet build --no-restore --configuration Release
 
-test_script:
-- dotnet test --no-build --configuration Release --logger "console;verbosity=detailed" -p:CollectCoverage=true 
+test:
+  assemblies:
+    only:
+      - '**\*.tests.dll'
+#test_script:
+#- dotnet test --no-build --configuration Release -p:CollectCoverage=true 
 
 after_test:
 - choco install codecov

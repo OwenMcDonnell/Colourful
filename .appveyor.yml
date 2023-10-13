@@ -16,7 +16,7 @@ build_script:
 test:
   assemblies:
     only:
-      - '**\*.tests.dll'
+      - '**\*.Tests.dll'
 #test_script:
 #- dotnet test --no-build --configuration Release -p:CollectCoverage=true 
 
